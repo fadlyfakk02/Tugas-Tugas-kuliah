@@ -1,0 +1,97 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    char choice;
+    do {
+        double num1, num2, result;
+        cout << "Scientific Calculator" << endl;
+        cout << "1. Addition" << endl;
+        cout << "2. Subtraction" << endl;
+        cout << "3. Multiplication" << endl;
+        cout << "4. Division" << endl;
+        cout << "5. Square Root" << endl;
+        cout << "6. Exponentiation" << endl;
+        cout << "7. EXIT" << endl;
+
+        cout << "Enter your choice (1/2/3/4/5/6/7): ";
+        cin >> choice;
+
+        switch (choice) {
+            case '1':
+                cout << "Enter first number : ";
+                cin >> num1;
+                cout << "Enter second number : ";
+                cin >> num2; 
+                result = num1 + num2;
+                cout << "Result : " << result << endl;
+                break;
+            case '2':
+                cout << "Enter first number : ";
+                cin >> num1;
+                cout << "Enter second number : ";
+                cin >> num2;
+                result = num1 - num2;
+                cout << "Result : " << result << endl;
+                break;
+            case '3':
+                cout << "Enter first number : ";
+                cin >> num1;
+                cout << "Enter second number : ";
+                cin >> num2;
+                result = num1 * num2;
+                cout << "Result : " << result << endl;
+                break;
+            case '4':
+                cout << "Enter numerator : ";
+                cin >> num1;
+                cout << "Enter denominator : ";
+                cin >> num2;
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    cout << "Result : " << result << endl;
+                } else {
+                    cout << "Division by zero is not allowed." << endl;
+                }
+                break;
+            case '5':
+                cout << "Enter a number : ";
+                cin >> num1;
+                if (num1 >= 0) {
+                    result = sqrt(num1);
+                    cout << "Square Root : " << result << endl;
+                } else {
+                    cout << "Invalid input for square root." << endl;
+                }
+                break;
+            case '6':
+                cout << "Enter base : ";
+                cin >> num1;
+                cout << "Enter exponent : ";
+                cin >> num2;
+                result = pow(num1, num2);
+                cout << "Result : " << result << endl;
+                break;
+            case '7':
+                {
+                 cout << "**************************************" << endl;
+                 cout << "**************************************" << endl;
+                 cout << "*******    T H A N K  Y O U    *******" << endl;
+                 cout << "*******    F O R  U S I N G    *******" << endl;
+                 cout << "******* T H I S  P R O G R A M *******" << endl;
+                 cout << "**************************************" << endl;
+                 cout << "**************************************" << endl;
+                }
+            default:
+                cout << "Invalid choice. Please choose a valid option (1/2/3/4/5/6/7)." << endl;
+                break;
+        }
+
+        cout << "Do you want to perform another calculation? (y/n) : ";
+        cin >> choice;
+    } while (choice == 'y' || choice == 'Y');
+
+    return 0;
+}
