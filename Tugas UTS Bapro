@@ -84,6 +84,7 @@ int main() {
                  cout << "**************************************" << endl;
                  cout << "**************************************" << endl;
                 }
+                break;
             default:
                 cout << "Invalid choice. Please choose a valid option (1/2/3/4/5/6/7)." << endl;
                 break;
